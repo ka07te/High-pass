@@ -1,0 +1,281 @@
+@import 'mixin.scss';
+@import 'variables.scss';
+
+.container {
+  max-width: 1024px;
+}
+
+.text-center {
+  font-size: 36px;
+}
+
+.header {
+  background: $blackBrown;
+}
+
+.header-body {
+  align-items   : center;
+  flex-direction: row;
+}
+
+
+.header-list {
+  margin-left: 82px;
+  @include transition;
+
+  &__item:not(:nth-child(5n)) {
+    margin-right: 33px;
+  }
+}
+
+.header-search {
+  top: -14px;
+}
+
+.hidden {
+  opacity   : 0;
+  @include transition;
+  transform : translateY(50px);
+  height    : 0;
+  width     : 0;
+}
+
+.header-search {
+  &__icon {
+    top: 0px
+  }
+}
+
+.preview-body {
+  grid-template-rows: 20px repeat(1, 1fr);
+
+  &__title {
+    h2 {
+      font-size  : 24px;
+      line-height: 104%;
+    }
+  }
+}
+
+.preview-content {
+  &__text {
+    padding-top: 80%;
+  }
+
+  &__header {
+    width        : 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.preview-content__hashtag {
+  padding: 18px 0px;
+  margin : 10px 21px 10px auto;
+}
+
+.subscribe__input {
+  width: 93%;
+}
+
+.hashtag {
+  &__btn-image-add {
+    margin: 10px auto;
+    width  : 200px;
+    padding: 14px 19px;
+  }
+
+  &__btn-image-back {
+    margin: 10px auto;
+    width  : 200px;
+    padding: 14px 19px;
+  }
+
+  &__back {
+    width  : 200px;
+    padding: 14px 19px;
+  }
+}
+
+.project-body {
+  grid-template-rows   : minmax(230px, auto) repeat(2, minmax(300px, auto));
+  grid-template-columns: repeat(12, 1fr);
+
+  &__item:first-child {
+    grid-area: 1/1/1/4;
+  }
+
+  &__item:nth-child(2) {
+    grid-area: 1/4/1/7;
+  }
+
+  &__item:nth-child(3) {
+    grid-area: 1/7/1/13;
+  }
+
+  &__item:nth-child(4) {
+    grid-area: 2/1/2/8;
+  }
+
+  &__item:nth-child(5) {
+    grid-area: 2/8/2/13;
+  }
+
+  &__item:nth-child(6) {
+    grid-area: 3/1/3/6;
+  }
+
+  &__item:last-child {
+    grid-area: 3/6/3/13;
+  }
+}
+
+.project-small__text {
+  line-height: 22px;
+}
+
+.project-modal-card,
+.preview-modal-card,
+.service-modal-card {
+  padding: 20px;
+}
+.service-modal-card{
+  &__picture{
+    margin-top: 20px;
+    display   : block;
+    float: right;
+    width: 60%;
+    img {
+      width: 90%;
+    }
+   }
+  &__img{
+    float: right;
+    width: 60%;
+    img{
+      width: 90%;
+    }
+  }
+  &__text {
+    margin: 0;
+    @include text(16px, 30px);
+  }
+}
+
+.border-and-shadow {
+  border: 25px solid $orange;
+  position: relative;
+
+}
+.border-and-shadow:after {
+  content: '';
+  bottom: 0;
+  box-shadow: 0 0 24px 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.service-sale {
+  max-width: 340px;
+}
+
+.service-content-right {
+  text-align: inherit;
+  width     : 280px;
+
+  &__img {
+    width: 280px;
+  }
+}
+
+.service-content-left {
+  display   : flex;
+  text-align: inherit;
+  width     : 572px;
+
+  &__info {
+    margin-left: 15px;
+    width      : 86%;
+  }
+}
+
+.service-slide-one,
+.service-slide-two {
+  width: 572px;
+}
+
+.service-slide-one {
+  display: block;
+}
+
+.servise-grid {
+  display              : grid;
+  grid-template-rows   : 1fr;
+  grid-template-columns: minmax(572px, auto) 342px;
+  position             : relative;
+}
+
+.service-swiper {
+  width    : 572px;
+  margin   : 0;
+  grid-area: 1/1/3/1;
+}
+
+.service-content-center {
+  margin-top: 70px;
+}
+
+.service-work {
+  position  : static;
+  margin-top: 50px;
+}
+
+.footer-content {
+
+  &__social {
+    padding: 24px 0 16px0;
+  }
+
+  &__info {
+    display: block;
+    width  : 38%;
+    @include text(16px, 22px);
+    color: $svg;
+
+    div {
+      color: $pearlBlackberry;
+    }
+  }
+}
+
+.container-contacts {
+  max-width: 1024px;
+}
+
+.contacts-body {
+  display   : flex;
+  margin-top: 22px;
+}
+
+.contacts-map {
+  margin-top: 0;
+  width     : 70%;
+}
+
+.contacts-application-form {
+  margin-top : 0;
+  margin-left: 30px;
+}
+
+.contact-form__common {
+  margin-top: 18px;
+}
+
+.macterclass-content__text {
+  line-height: 22px;
+}
+
+.macterclass-basic__btn {
+  margin-top: 77px;
+}

@@ -1,0 +1,79 @@
+.macterclass{
+  background-color: $blackBrown;
+  margin-top: 50px;
+  padding-bottom: 60px;
+  &__title{
+padding: 23px 0 14px;
+    @include header(18px, 23px);
+    color: $white;
+  }
+}
+.macterclass-basic{
+  color: $white;
+  &__img{
+    img{
+      width: 100%;
+    }
+  }
+&__time{
+  margin-top: 21px;
+  display: flex;
+}
+&__info{
+  margin-top: 11px;
+  @include text-Firs(18px, 20px)
+}
+&__text{
+  @include text(14px, 25px);
+}
+&__btn{
+  margin-top: 10px;
+  @include btn-orange(12px 22px,14px,16px);
+}
+}
+.macterclass-data{
+  &__svg{
+    @include calendar;
+    margin-right: 0px;
+    fill: $white;
+  }
+  &__date{
+    @include text(12px, 22px);
+  }
+}
+.macterclass-clock{
+  margin-left: 20px;
+  &__svg{
+    @include calendar;
+    margin-right: 0px;
+    fill: $white;
+  }
+  &__time{
+    @include text(12px, 22px);
+  }
+}
+.macterclass-time{
+  display: flex;
+  color: $white;
+}
+.macterclass-content{
+  display: flex;
+  margin-top: 30px;
+  &__img{
+  width: 94px;
+  height: 61px;
+  img{
+    width: 100%;
+  }
+  }
+  &__info{
+    margin-left: 29px;
+  }
+  &__text{
+    @include text-Firs(16px, 16px);
+    color: $white;
+    p{
+      color: $white;
+    }
+  }
+}

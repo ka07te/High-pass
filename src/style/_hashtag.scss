@@ -1,0 +1,46 @@
+.hashtag {
+  width: 100%;
+  overflow: scroll;
+  margin: 0 auto;
+  &__title {
+    @include hashtag-title;
+    align-items: center
+  }
+
+  &__image-search {
+    @include image-search;
+    img{
+      animation : header-list .9s ease-in-out;
+    }
+  }
+
+  &__image-search-big {
+    display        : flex;
+    justify-content: center;
+    img{
+      animation : header-list .7s ease-in-out;
+    }
+ 
+  }
+
+  &__btn-image-add {
+    @include btn-image;
+  }
+
+  &__btn-image-back {
+    @include btn-image;
+    display    : none;
+    position: absolute;
+    margin: 10px 0;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__back {
+    @include back;
+ margin-right: 0;
+  }
+}
+
+

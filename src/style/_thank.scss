@@ -1,0 +1,64 @@
+.thank {
+  position: relative;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__wrapper {
+    position           : absolute;
+    top                : 0;
+    left               : 0;
+    right              : 0;
+    bottom             : 0;
+    background-position: center center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    z-index            : 0;
+  }
+  &__text {
+    position    : absolute;
+    font-size   : 24px;
+    font-weight : 700;
+    outline     : 0;
+    text-align  : center;
+    color       : $darkOrange;
+    top         : 50%;
+    left        : 50%;
+    margin-right: -50%;
+    transform   : translate(-50%, -50%);
+    z-index     : 2;
+    filter: none;
+    @include transition;
+  
+    &:hover:not(:focus-visible) {
+      ~.thank__wrapper {
+        background-color: $blackBrown;
+        transition      : .2s linear;
+      }
+    }
+    &:focus-visible {
+      color: $white;
+    
+      ~.thank__wrapper {
+        background-color: $blackBrown;
+        transition      : .2s linear;
+      }
+    }
+    &:active:not(:focus-visible) {
+      color: $white;
+    
+      ~.thank__wrapper {
+        background: -webkit-linear-gradient(315deg, rgb(206, 67, 7), rgb(246, 183, 156));
+        transition: .2s linear;
+      }
+    }
+    
+  }
+}
+
+
+
+
+
+

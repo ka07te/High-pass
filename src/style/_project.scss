@@ -1,0 +1,163 @@
+.project {
+  margin-top: 50px;
+}
+
+.project-body {
+  margin-top: 16px;
+
+  &__item:not(:first-child) {
+    margin-top: 16px;
+  }
+}
+
+.project-img {
+  position: relative;
+  @include transition;
+
+  img {
+    width: 100%;
+  }
+
+  &__hashtag {
+    position: absolute;
+    top     : 10px;
+    right   : 10px;
+    @include hashtag-wrapper(4px 14px, 0, auto);
+    @include transition;
+
+    &:hover:not(:focus-visible) {
+      background-color: $white;
+      @include transition;
+
+      .project-img__link {
+        color: $twilightGray;
+        @include transition;
+      }
+    }
+  }
+}
+
+.project-date {
+  display    : flex;
+  align-items: center;
+  @include transition;
+
+  &__svg {
+    @include calendar;
+    fill: $pearlLightGray;
+  }
+
+  &__date {
+    @include text(12px, 22px);
+    color: $pearlLightGray;
+    @include transition;
+  }
+}
+
+.project-big {
+  position: relative;
+  @include transition;
+
+  &__hashtag {
+    position: absolute;
+    top     : 10px;
+    right   : 10px;
+    @include hashtag-wrapper(4px 14px, 0, auto);
+    @include transition;
+
+    &:hover:not(:focus-visible) {
+      background-color: $white;
+      @include transition;
+
+      .project-big__link {
+        color: $twilightGray;
+      }
+    }
+  }
+
+  &__info {
+    position: absolute;
+    bottom  : 50px;
+    left    : 29px;
+  }
+
+  &__title {
+    @include header(24px, 24px);
+    color: $white;
+  }
+
+  &__text {
+    @include text(14px, 18px);
+    color: $white;
+    @include transition;
+  }
+
+  &__btn {
+    @include btn;
+    margin-top : 28px;
+    padding    : 12px 19px;
+    font-size  : 14px;
+    line-height: 16px;
+    @include transition;
+  }
+}
+
+.project-date-big {
+  &__svg {
+    @include calendar;
+    fill        : $white;
+  
+  }
+
+  &__date {
+    @include text(12px, 22px);
+    color: $white;
+  }
+}
+
+.project-wrapper-modal {
+  cursor: pointer;
+  @include transition;
+
+  &:hover:not(:focus-visible) {
+    .project-small__text,
+    .project-date__date {
+      color     : $black;
+      font-style: italic;
+      @include transition;
+    }
+
+    .project-date__svg {
+      fill: $black;
+      @include transition;
+    }
+  }
+
+  &:focus-visible {
+    .project-small__text,
+    .project-date__date {
+      color     : $black;
+      font-style: italic;
+      @include transition;
+    }
+
+    .project-date__svg {
+      fill: $black;
+      @include transition;
+    }
+  }
+
+  &:active:not(:focus-visible) {
+    transform : translateX(7px);
+    @include transition;
+    color     : $blackBrown;
+
+    .service-content-left__btn-svg {
+      fill: $blackBrown;
+      @include transition;
+    }
+  }
+}
+.project-small__text{
+  @include transition;
+}

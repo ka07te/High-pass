@@ -1,0 +1,88 @@
+.aboutus {
+  background-color: $blackBrown;
+  margin-top      : 50px;
+
+  &__header {
+    @include header(18px, 23px);
+    padding-top: 32px;
+    color      : $white;
+  }
+}
+
+.about-us {
+  &__info {
+    @include text(14px, 25px);
+    margin       : 5px 0 18px;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    white-space  : pre;
+    color        : $white;
+
+    &.active {
+      white-space: normal;
+    }
+  }
+}
+
+.subscribe {
+  padding: 25px 0 60px;
+
+
+  &__label {
+    display: block;
+    @include text(18px, 22px);
+    color: $white;
+  }
+
+  &__inner {
+    position  : relative;
+    margin-top: 16px;
+  }
+
+  &__input {
+    width           : 89%;
+    padding         : 12px 12px 12px 23px;
+    background-color: $ironGray;
+
+    &::placeholder {
+      font-style : normal;
+      font-weight: normal;
+      font-size  : 16px;
+      color      : $lightGray;
+    }
+
+    &:hover:not(:focus-visible) {
+      &::placeholder {
+        color: $orange;
+      }
+    }
+
+    &:focus-visible {
+      outline: 1px solid $orange
+    }
+
+    &:active:not(:focus-visible) {
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    &.active {
+      color: $white
+    }
+  }
+
+  &__btn {
+    @include btn-orange(14px 19px, 16px, 19px);
+    margin-top: 16px;
+  }
+
+}
+.element-animation {
+  opacity: 0;
+}
+.element-animation.element-show {
+  opacity: 1;
+  transition: opacity 1s;
+  animation       : photo .7s ease-in-out;
+}

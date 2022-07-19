@@ -1,0 +1,44 @@
+.insta,
+.vk,
+.fb {
+  fill  : $lightGray;
+  height: 30px;
+  width : 30px;
+}
+
+.phone-header {
+  fill: $orange;
+}
+
+.phone-contacts {
+  margin-right: 5px;
+  width       : 16.5px;
+  height      : 16.5px;
+  fill        : $white;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+  .social:hover:not(:focus-visible) .fb,
+  .social:hover:not(:focus-visible) .vk,
+  .social:hover:not(:focus-visible) .insta {
+    fill: $orange;
+  }
+}
+
+.social:focus-visible .fb,
+.social:focus-visible .vk,
+.social:focus-visible .insta {
+  fill: $pearlOrange;
+}
+
+@media(max-width: 1300px) {
+  .social:active:not(:focus-visible) .vk,
+  .social:active:not(:focus-visible) .fb,
+  .social:active:not(:focus-visible) .insta {
+    fill: $darkOrange;
+  }
+  .phone-contacts {
+    fill        : $orange;
+  }
+}

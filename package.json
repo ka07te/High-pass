@@ -1,0 +1,38 @@
+{
+  "name": "qwe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-image": "^6.2.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^4.0.1"
+  },
+  "dependencies": {
+    "sass": "^1.41.1"
+  }
+}

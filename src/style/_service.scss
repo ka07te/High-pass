@@ -1,0 +1,288 @@
+.service {
+  margin-top: 30px;
+
+  &__title {
+    @include header(18px, 23px);
+  }
+}
+
+.service-wrapper {
+  display: flex;
+}
+
+.service-swiper {
+  margin-top: 5px;
+  width     : 278px;
+  overflow  : hidden;
+}
+
+.swiper-scrollbar {
+  width: 278px;
+}
+
+.swiper-scrollbar-drag {
+  background-color: $orange;
+  height          : 2px;
+}
+
+.swiper-pagination {
+  width          : 278px;
+  display        : flex;
+  justify-content: space-between;
+}
+
+.swiper-pagination-bullet {
+  font-family: Roboto;
+  font-style : normal;
+  font-weight: bold;
+  font-size  : 14px;
+  color      : $pearlBlackberry;
+  cursor     : pointer;
+
+  &-active {
+    color: $orange;
+  }
+}
+
+.service-content-left {
+  margin-top: 15px;
+
+  &__img {
+    width: 278px;
+  }
+
+  &__title {
+    @include header(16px, 22px);
+    font-weight: 400;
+  }
+
+  &__text {
+    @include text(14px, 18px);
+    color: $pearlLightGray;
+  }
+
+  &__btn {
+    position   : relative;
+    font-family: Roboto;
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 14px;
+    line-height: 28px;
+    color      : $orange;
+    cursor: pointer;
+    @include transition;
+
+    &:hover:not(:focus-visible) {
+      transform : translateX(5px);
+       @include transition;
+    }
+
+    &:focus-visible {
+      transform : translateX(7px);
+       @include transition;
+      color     : $pearlOrange;
+
+      .service-content-left__btn-svg {
+        fill: $pearlOrange;
+      }
+    }
+
+    &:active:not(:focus-visible) {
+      transform : translateX(7px);
+       @include transition;
+      color     : $blackBrown;
+
+      .service-content-left__btn-svg {
+        fill: $blackBrown;
+      }
+    }
+
+    &-svg {
+      position: absolute;
+      fill    : $orange;
+      width   : 15px;
+      height  : 10px;
+      top     : 9px;
+      right   : -18px;
+    }
+  }
+}
+
+.service-content-right {
+  margin-top: 25px;
+
+  &__img {
+    width: 278px;
+  }
+
+  &__img:nth-child(7) {
+    display: none;
+  }
+
+  &__img:nth-child(8) {
+    display: none;
+  }
+
+  &__title {
+    @include header(16px, 22px);
+    font-weight: 400;
+  }
+
+  &__text {
+    @include text(14px, 18px);
+    color: $pearlLightGray;
+  }
+
+  &__btn {
+    position   : relative;
+    font-family: Roboto;
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 14px;
+    line-height: 28px;
+    color      : $orange;
+
+    &:hover:not(:focus-visible) {
+      transform : translateX(7px);
+       @include transition;
+    }
+
+    &:focus-visible {
+      transform : translateX(7px);
+       @include transition;
+      color     : $pearlOrange;
+
+      .service-content-right__btn-svg {
+        fill: $pearlOrange;
+      }
+    }
+
+    &:active:not(:focus-visible) {
+      transform : translateX(7px);
+       @include transition;
+      color     : $blackBrown;
+
+      .service-content-right__btn-svg {
+        fill: $blackBrown;
+      }
+    }
+
+    &-svg {
+      position: absolute;
+      fill    : $orange;
+      width   : 15px;
+      height  : 10px;
+      top     : 9px;
+      right   : -18px;
+    }
+  }
+}
+
+
+.service-content-right:nth-child(7),
+.service-content-right:nth-child(8),
+.service-content-right:nth-child(9),
+.service-content-right:nth-child(10) {
+  display: none;
+}
+
+.service-content-center {
+  margin-top: 21px;
+  position  : relative;
+
+  &__info {
+    width   : 80%;
+    height  : 80%;
+    position: absolute;
+    top     : 0;
+    padding : 21px 30px 30px;
+  }
+}
+
+.service-sale {
+  max-width      : 222px;
+  display        : flex;
+  justify-content: space-between;
+
+  &__text {
+    color: $yellow;
+
+    h2 {
+      font-weight: bold;
+      font-size  : 30px;
+      line-height: 104%;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size  : 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+}
+
+.service-info {
+  position: absolute;
+  bottom  : 0px;
+
+  &__text {
+    width: 218px;
+    @include text(14px, 18px);
+    color: $white;
+  }
+
+  &__btn {
+    margin-top: 10px;
+    @include btn-orange(14px 19px, 16px, 19px);
+    background-color: $orange;
+  }
+}
+
+.service-work {
+  margin-top: 22px;
+  position  : relative;
+
+  &__title {
+    @include header(18px, 23px);
+  }
+
+  &__content {
+    margin-top     : 14px;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-around;
+  }
+
+  &__wrapper {
+    max-width: 124px;
+    cursor   : pointer;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__big-img {
+    position        : absolute;
+    display         : none;
+    opacity         : 0;
+    top             : 50%;
+    left            : 50%;
+    margin-right    : -50%;
+    transform       : translate(-50%, -50%);
+    max-width       : 320px;
+    background-color: $white;
+    animation       : photo 0.9s ease-in-out;
+
+    &.active {
+      display  : block;
+      opacity  : 1;
+      animation: photo 0.9s ease-in-out;
+      cursor   : pointer;
+    }
+  }
+}

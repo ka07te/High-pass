@@ -1,0 +1,40 @@
+<section class="contacts" id="contacts">
+  <div class="container-contacts">
+    <h2 class="contacts__title">Контакты</h2>
+    <div class="contacts-body">
+      <div class="contacts-map mymap" id="map">
+        <div class="map-info">
+          <svg class="map-info__close">
+              <use xlink:href="images/sprite.svg#close"></use>
+          </svg>
+          <address class="map-info__address map-address">
+            <div class="map-address__title">Студия “High pass”</div>
+            <a class="map-address__address" href="https://yandex.ru/maps/?text=107045,Москва,Даевпереулок,дом20" target="_blank">107045, Москва, Даев переулок, дом 20</a>
+              <a href="tel:+749542423532" class="map-address__phone"><svg
+                  class="map-address__phone-svg">
+                  <use xlink:href="images/sprite.svg#phone"></use>
+                </svg>+7 (495) 42-423-532</a> 
+          </address>
+        </div>
+      </div>
+      <div class="contacts-application-form">
+  
+  <h3 class="contacts-application-form__title">Оставить заявку</h3>
+  <div class="contacts-application-form__text">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия</div>
+  <form action="mails.php" method="POST" class="contacts-application-form__form contact-form js-valid">
+  <div class="contact-form__inner">
+    <input class="contact-form__common js-input" type="text" name="user_name" placeholder="Имя"
+      data-validate-field="name">
+  </div>
+  <div class="contact-form__inner">
+    <input class="contact-form__common js-input" type="text" name="user_email" placeholder="E-mail"
+      data-validate-field="mail">
+  </div>
+  <textarea class="contact-form__common js-input" name="user_comment"
+    placeholder="Комментарий"></textarea>
+  <button class="contact-form__btn">Отправить</button>
+  </form>
+  </div>
+    </div>
+  </div>
+  </section>

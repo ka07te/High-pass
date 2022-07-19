@@ -1,0 +1,27 @@
+<section class="about" id='about'>
+  <div class="container">
+    <h2 class="about__header">О студии</h2>
+    <div class="about__body about-us">
+      <div class="about-us__info"></div>
+      <div class="about__subscribe about-subscribe">
+        <div class="about-subscribe__img">
+          <picture class="element-animation">
+            <source media="(min-width:1310px)" srcset="../images/about/about01.webp">
+            <source media="(min-width: 1024px)" srcset="../images/about/about01.01.webp">
+            <source media="(min-width:768px)" srcset="../images/about/about01.02.webp">
+            <source media="(min-width:500px)" srcset="../images/about/about01.webp">
+            <img src="../images/about/about01.03.webp" alt="Фотоаппарат">
+          </picture>
+        </div>
+        <form action="mail.php" method="POST" class="about-subscribe__form subscribe js-validate">
+          <label class="subscribe__label">Подписаться на рассылку</label>
+          <div class="subscribe__inner">
+            <input class="subscribe__input js-input" type="text" name="user_mail" placeholder="E-mail" 
+              data-validate-field="mail">
+          </div>
+          <button class="subscribe__btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

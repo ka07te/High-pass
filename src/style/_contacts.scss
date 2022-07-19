@@ -1,0 +1,170 @@
+.contacts {
+  margin-top: 32px;
+
+  &__title {
+    margin-left: 21px;
+    @include header(18px, 23px);
+  }
+}
+
+.contacts-map {
+  margin-top: 15px;
+  width     : 100%;
+  height    : 400px;
+  position  : relative;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1)
+}
+
+.map-info {
+  position        : absolute;
+  width           : 100%;
+  height          : 33%;
+  background-color: rgba($blackBrown, .85);
+  color           : $white;
+  bottom          : -2px;
+  opacity         : 1;
+  transition      : 1s ease;
+  z-index         : 25;
+
+  &__close {
+    position: absolute;
+    right   : 20px;
+    top     : 20px;
+    width   : 20px;
+    height  : 20px;
+    fill    : $pearlBlackberry;
+    cursor  : pointer;
+  }
+
+  &.active {
+    opacity   : 0;
+    transform : translate(-350px, 0);
+    transition: 1s ease;
+  }
+}
+
+.map-address {
+  padding: 26px 34px 14px 19px;
+
+  &__title {
+    @include text-Firs(18px, 22px);
+  }
+
+  &__address {
+    display   : block;
+    margin-top: 10px;
+    @include text(14px, 18px);
+
+    &:focus-visible {
+      outline: 3px solid $orange;
+    }
+
+    &:active:not(:focus-visible) {
+      outline: 3px solid $darkOrange;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    display : block;
+    margin  : 12px 0 0 21px;
+    @include text-Firs(16px, 21px);
+    color: $orange;
+
+    &::before {
+      position: absolute;
+      display : none;
+      content : "";
+      width   : 200px;
+      height  : 25px;
+      left    : -30px;
+      top     : -5px;
+      border  : 3px solid $orange;
+    }
+
+    &:focus-visible {
+      color: $white;
+
+      &:before {
+        display: block;
+      }
+    }
+
+    &:active:not(:focus-visible) {
+      color: $white;
+
+      &:before {
+        display: block;
+        border : 3px solid $darkOrange;
+      }
+    }
+
+    &-svg {
+      position: absolute;
+      top     : 2px;
+      left    : -21px;
+      width   : 16.5px;
+      height  : 16.5px;
+      fill    : $orange;
+    }
+  }
+}
+
+.contacts-application-form {
+  margin: 23px auto;
+  max-width: 280px;
+
+  &__title {
+    @include text-Firs(18px, 22px);
+    color: $blackBrown;
+  }
+
+  &__text {
+    margin-top: 7px;
+    @include text(14px, 18px);
+    color: $pearlLightGray;
+  }
+}
+
+.contact-form {
+  overflow-x: hidden;
+
+  &__inner {
+    position: relative;
+
+    div {
+      top  : 24px;
+      right: 11px;
+    }
+  }
+
+  &__common {
+    margin-top      : 20px;
+    background-color: $lightlightGray;
+    padding         : 12px 0 11px 23px;
+    width           : 90%;
+
+    &::placeholder {
+      font-size  : 14px;
+      line-height: 16px;
+      color      : $pearlLightGray;
+    }
+  }
+
+  &__common:nth-child(3) {
+    height: 150px;
+  }
+
+  &__btn {
+    margin-top: 20px;
+    @include btn-orange(15px 22px, 16px, 19px);
+    &:hover:not(:focus-visible) {
+      border: 3px solid $orange;
+      background : transparent;
+      color: $orange;
+    }
+  }
+}
