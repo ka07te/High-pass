@@ -1,28 +1,18 @@
 #  High-pass
- Верстка `Mobile first`
-
-C примением `CSS Grid`
-
-Использована `gulp-сборка` 
-
-Препроцессор `Sass`
-
-Именование классов по методологии `БЭМ`
+Стек:
+`Mobile first`
+`CSS Grid`
+`gulp-сборка` 
+`Sass`
+`БЭМ`
 
 Загрузка изображений с помощью `JavaScript Fetch API` для получения данных [`Pixabay API`](https://pixabay.com/)
-
 Формы обратной связи сделаны через SMTP в `PHPMailer`
 
-Создание  `SVG-спрайт` и стилизация иконок средствами CSS
-
-## С подключением плагинов
-
-Валидация форм с помощью [`Just-validate`](https://github.com/horprogs/Just-validate)
-
-Слайдер [`Swiper `](https://swiperjs.com)
-
-Kартa [`Yandex`](https://yandex.ru/dev)
-
-Анимация [`Greensock`](https://greensock.com/gsap/)
+## Плагины:
+Анимация Greensock (https://greensock.com/gsap/)
+Валидация форм с помощью Just-validatе (https://github.com/horprogs/Just-validate)
+Kартa Yandex (https://yandex.ru/dev)
+Слайдер Swiper (https://swiperjs.com)
 
 Для работы с данной сборкой: `npm i` , `gulp dev` для разработки или ` gulp build` окончательный вариант
